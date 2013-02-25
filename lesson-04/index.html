@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+ <html>
+    
+    <head>
+		<title>Jennifer Watanabe | HTML5</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="homework/demo.css" rel="stylesheet" type="text/css">
+	<script src="homework/canvas_lib/easeljs-0.6.0.min.js"></script>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+		  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap -->
+        
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="css/jenny.css" rel="stylesheet" media="screen">
+        <script>
+		var stage, output;
+		
+		function init() {
+			stage = new createjs.Stage("demoCanvas");
+			
+			// this lets our drag continue to track the mouse even when it leaves the canvas:
+			// play with commenting this out to see the difference.
+			stage.mouseMoveOutside = true; 
+			
+			var circle = new createjs.Shape();
+			circle.graphics.beginFill("#0066cc").drawCircle(0, 0, 75);
+			
+			var label = new createjs.Text("drag me", "bold 14px Arial", "#ffffff");
+			label.textAlign = "center";
+			label.y = -7;
+			
+			var dragger = new createjs.Container();
+			dragger.x = dragger.y = 100;
+			dragger.addChild(circle, label);
+			stage.addChild(dragger);
+			
+			dragger.addEventListener("mousedown", function(evt) {
+				var offset = {x:evt.target.x-evt.stageX, y:evt.target.y-evt.stageY};
+                 
+				// add a handler to the event object's onMouseMove callback
+				// this will be active until the user releases the mouse button:
+				evt.addEventListener("mousemove",function(ev) {
+				    ev.target.x = ev.stageX+offset.x;
+					ev.target.y = ev.stageY+offset.y;
+					stage.update();   
+				});
+			});
+			
+			stage.update();
+		}
+	</script>
+	</head>
+	<body onLoad="init();">
+  
+    <!--header start-->
+    
+      <header class="row"><br>
+		<div class="span12">
+     	 <h1>&nbsp;</h1>
+      	</div>
+      </header>
+      <!--header end--->
+      <!--nav start-->
+        <div class="container">
+    		<div class="hero-unit">
+        		<h1>Jennifer Watanabe</h1><br />
+        			<p>Welcome to my HTML5 Assignment page.<br />
+        				Won't you take a look around...</p>
+      		</div>
+        	<div class="row">
+        		<div class="span9">
+      				<nav>
+          				<div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
+    						<ul class="nav nav-tabs">
+    							<li><a href="#tab1" data-toggle="tab"><strong>Assignments</strong></a></li>
+    <li><a href="#tab2" data-toggle="tab">Week 2 - HTML 5</a></li>
+    <li><a href="#tab3" data-toggle="tab">Week 3 - CSS3</a></li>
+    <li class="active"><a href="#tab4" data-toggle="tab">Week 4 - Canvas</a></li>
+    <li><a href="#tab5" data-toggle="tab">Week 5 - SVG</a></li>
+    <li><a href="#tab6" data-toggle="tab">Week 6 - Media</a></li>
+    <li><a href="#tab7" data-toggle="tab">Week 7 - Animation and Effects</a></li>
+    <li><a href="#tab8" data-toggle="tab">Week 8 - Forms</a></li>
+    <li><a href="#tab9" data-toggle="tab">Week 9 - Time and Place</a></li>
+    <li><a href="#tab10" data-toggle="tab">Week 10 - Persistant Data</a></li>
+    <li><a href="#tab11" data-toggle="tab">Week 11 - Server Communication</a></li>
+    <li><a href="#tab12" data-toggle="tab">Week 12 - Security</a></li>
+    <li><a href="#tab13" data-toggle="tab">Week 13 - Mobile</a></li>
+    <li><a href="#tab14" data-toggle="tab">Week 14 - Media Input</a></li>
+    <li><a href="#tab15" data-toggle="tab">Week 15 - Game Development</a></li>
+    <li><a href="#tab16" data-toggle="tab">Week 16 - Performance and Professional Tools</a></li>
+    </ul>
+    <div class="tab-content">
+    <div class="tab-pane" id="tab1">
+    
+    </div>
+    <div class="tab-pane" id="tab2">
+    <h2>HTML5</h2>
+    <p>This was a great exercise to get my feet wet. I took a webpage I created for a previous class and attempted to update it with the new html5 tags. I updated the doctype, meta, link tags first. Then I updated my div nav tags to just nav tags and updated main content div to a section div. After these changes, I uploaded my file. To my surprise, the styles had all disappeared. I had a &#x22;duh!&#x22; moment and updated the ids that were previously there, to the new HTML5 tags. Now they worked! And to be honest, I was pretty surprised that they worked; because this code is different from what I&#x27;m used to working with. Unfortunately, I didn&#x27;t have a lot of content to work with on this page that I chose, but I am very excited to see the all of the new features HTML5 uses. </p>
+    <br />
+    <p>Links to assigment</p>
+    <ul>
+    <li><a href="http://student.santarosa.edu/~jwatanab/html5/week2_original.html" target="_blank">Orginal</a></li>
+    <li><a href="http://student.santarosa.edu/~jwatanab/html5/week2.html" target="_blank">HTML5 Updated</a></li>
+    <li><a href="https://github.com/kiyokochan/html5-spring-2013/tree/master/lesson-02"target="_blank">Github</a></li>
+    </ul>
+    </div>
+     <div class="tab-pane" id="tab3">
+    <h2>CSS3</h2>
+    <p>For this assignment, I implemented the following CSS3 features:</p>
+    <ol>
+     <li>The h1,h2,h3 and h4 headings are using a font face from Google&#x27;s web fonts, &#x22;Open Sans Condensed&#x22;</li>
+     <li>I added a text shadow to all text located in the header tag</li>
+     <li>Rounded corners can be found on the bottom of my &#x22;Aboout Me&#x22; section</li>
+     <li>Added a box shadow to my &#x22;About Me&#x22; section</li>
+    </ol>
+	<p>You can see my transition element by hovering over the &#x22;HTML5 IS AWESOME&#x22; box located under my self-description.</p>
+	 <br />
+    <p>Links to assigment</p>
+    <ul>
+    <li>You're looking at it.</li>
+    <li><a href="https://github.com/kiyokochan/html5-spring-2013/tree/master/lesson-03"target="_blank">Github</a></li>
+    </ul>
+    </div>
+     <div class="tab-pane active" id="tab4">
+     <h2>Canvas</h2>
+    <canvas id="demoCanvas" width="500" height="200">
+	</canvas>
+    <p>This was a challenging assignment for me as I don&#x27;t quite speak the Javascript language and my eyes tend to glaze over when there&#x27;s a lot of text with variables and functions. Even after reading Chapter 4, I was even more confused than when I started. The &#x22;Canvas Deep Dive&#x22; in the Explore section helped me out a lot, as the author, Josh Marinacci, really explained the canvas function in plain English.</p>
+    
+	<p>I think I looked at every one of the different libraries that were posted to find one that was easy to understand, had tutorials and gave good examples. After hours of downloading numerous zip files and attempting the tutorials of various libraries, I found that EaselJS was the one for me. This site was visually pleasing and simple and there were links to several tutorials. After reading more about it, I learned that many Flash developers were taking it up after Adobe announced that they were going to stop support for Flash players and start supporting HTML5. As someone who took Flash eons ago, EaselJS was a little easier to understand.  After extracting the EaselJS download, to my surprise, they included tutorials! They were easy to understand and went about it step-by-step.</p>
+    
+<p>For my assignment, I wanted something that had mouse interactivity, while keeping it simple.</p>
+<br />
+ <p>Links to assigment</p>
+    <ul>
+    <li>You&#x27;re looking at it.</li>
+    <li><a href="https://github.com/kiyokochan/html5-spring-2013/tree/master/lesson-04"target="_blank">Github</a></li>
+    </ul>
+    </div> 
+    <div class="tab-pane" id="tab5">
+    <h2>SVG</h2>
+    <p>Calm down. This will be up soon.</p>
+    </div>
+     <div class="tab-pane" id="tab6">
+    <p>Calm down. This will be up soon.</p>
+    </div>
+    <div class="tab-pane" id="tab7">
+    <p>Calm down. This will be up soon.</p>
+    </div>
+    <div class="tab-pane" id="tab8">
+    <p>Calm down. This will be up soon.</p>
+    </div>
+    <div class="tab-pane" id="tab8">
+    <p>Calm down. This will be up soon.</p>
+    </div>
+    <div class="tab-pane" id="tab10">
+    <p>Calm down. This will be up soon.</p>
+    </div>
+    <div class="tab-pane" id="tab11">
+    <p>Calm down. This will be up soon.</p>
+    </div>
+    <div class="tab-pane" id="tab12">
+    <p>Calm down. This will be up soon.</p>
+    </div>
+    <div class="tab-pane" id="tab13">
+    <p>Calm down. This will be up soon.</p>
+    </div>
+    <div class="tab-pane" id="tab14">
+    <p>Calm down. This will be up soon.</p>
+    </div>
+    <div class="tab-pane" id="tab15">
+    <p>Calm down. This will be up soon.</p>
+    </div>
+    <div class="tab-pane" id="tab16">
+    <p>Calm down. This will be up soon.</p>
+    </div>
+   
+    </div>
+    </div>
+     
+    </nav>
+    </div>
+     <div class="span3">
+     <img src="images/me.jpg" class="img-polaroid">
+     <h1>About Me</h1>
+     <p>I am a Marketing Coordinator at an Insurance Marketing Organization in Novato. At work, I am known as the "Office Ninja" as I am able to help my co-workers with different problems. Graphic design is my passion, but webpages are making its way up there as well. I graduated from Sonoma State with a Bachelor of Arts in Liberal Studies. I love learning, shopping and sleeping.</p>
+   <br />
+   <br />
+    <div class="awesome">
+     <h3>HTML5 IS AWESOME</h3>
+     </div>
+    </div>
+    </div>
+ <!----row---->
+    <div class="row">
+    <div class="span12">
+   	<footer align="center">
+    <p><small>Created by Jennifer Watanabe, 2013</small></p>
+    </footer>
+    
+    </div>
+    </div>
+    <!--nav end-->
+    <!--thumbnails begin-->
+ 
+    <!--thunmbnails end-->
+	  <script src="http://code.jquery.com/jquery.js"></script>
+	  <script src="js/bootstrap.js"></script>
+    </body>
+</html>

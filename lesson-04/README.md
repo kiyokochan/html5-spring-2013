@@ -1,6 +1,3 @@
-html5-spring-2013
-=================
-
-SRJC CS50.12 Section 5371
-
-This is a template repository for Santa Rosa Junior College students.    Clone this repository into your account 
+This was a challenging assignment for me as I don’t quite speak the Javascript language and my eyes tend to glaze over when there’s a lot of text with variables and functions. Even after reading Chapter 4, I was even more confused than when I started. The “Canvas Deep Dive” in the Explore section helped me out a lot, as the author, Josh Marinacci, really explained the canvas function in plain English. 
+I think I looked at every one of the different libraries that were posted to find one that was easy to understand, had tutorials and gave good examples. After hours of downloading numerous zip files and attempting the tutorials of various libraries, I found that EaselJS was the one for me. This site was visually pleasing and simple and there were links to several tutorials. After reading more about it, I learned that many Flash developers were taking it up after Adobe announced that they were going to stop support for Flash players and start supporting HTML5. As someone who took Flash eons ago, EaselJS was a little easier to understand.  After extracting the EaselJS download, to my surprise, they included tutorials! They were easy to understand and went about it step-by-step. 
+For my assignment, I wanted something that had mouse interactivity, while keeping it simple.
