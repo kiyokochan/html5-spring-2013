@@ -1,6 +1,1 @@
-html5-spring-2013
-=================
-
-SRJC CS50.12 Section 5371
-
-This is a template repository for Santa Rosa Junior College students.    Clone this repository into your account 
+At first I had wondered what the difference was between SVG and Canvas and I now know. Canvas is more for higher resolution more image intensive items such as video games or multi colored, complex images. SVG is more for the paired down graph or simple logo. Which is why my SVG is nothing fancy. I literally drew it from code, having to save and refresh every 10 seconds to make sure my coordinate placement was correct for each path or shape. I created two Bezier curves for my “eyes” and “mouth,” a ellipse shape for the head, a polygon shape with a gradient for the body and I added text. 
